@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body style="background-color: #2E2E2E">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <div class="firstBlock">
+            <div class="side">
+              <ul class="menu">
+                <li class="menu__list"><a href="#">Пункт 1</a>
+                  <ul class="menu__drop">
+
+                    <li><a href="./Geometrie/Geometrie.html">Геометрические расшеты</a></li>
+                    <li><a href="#">Подпункт 2</a></li>
+                    <li><a href="#">Подпункт 3</a></li>
+                    <li><a href="#">Подпункт 4</a></li>
+                    <li><a href="#">Подпункт 5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+        </div>
+        
+        <div class="secondBlock">
+            <div class="input"  onsubmit="return false;" style=" font-size: 90%">
+                <div style="color: #DBA901">
+                   <p>Внешняя сторона (a)</p>
+                   <input type="text" id="input1">
+                   <p>Внешняя сторона (b) </p>
+                   <input type="text" id="input2">
+                   <br />
+                   <p>Внутреняя сторона (a)</p>
+                   <input type="text" id="input3">
+                   <br />
+                   <p>Внутреняя сторона (b)</p>
+                   <input type="text" id="input4">
+                   <p>Длина</p>
+                   <input type="text" id="input5">
+                   <br />
+                   <br />
+                   <button class="button1" time="button" onclick="plus()">Расшетать</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="thirdBlock">
+            <div class="p">
+               Плотность <input type="text" id="P">
+           </div>
+           <div class="side">
+              <ul class="menu">
+                <li class="menu__list"><a href="#">Пункт 1</a>
+                  <ul class="menu__drop">
+
+                    <li></li>
+                    <li><input type="radio" name=""></li>
+                    <li><a href="#">Подпункт 3</a></li>
+                    <li><a href="#">Подпункт 4</a></li>
+                    <li><a href="#">Подпункт 5</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+        </div>
+        <div class="fourthBlock">
+            <table border="1"  width="100%" style="color: #DBA901">
+                <tr>
+                    <td>
+                        <p>Плошядь профиля</p>
+                    </td>
+                    <td>
+                        <p id="ba1"></p>
+                    </td>
+                    <td>
+                        <p>едениц<sup>2</sup></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Плошядь полости</p>
+                    </td>
+                    <td>
+                        <p id=ba2></p>
+                    </td>
+                    <td>
+                        <p>едениц<sup>2</sup></p>
+                    </td>
+                </tr>
+                    <td>
+                        <p>Плошядь полости</p>
+                    </td>
+                    <td>
+                        <p id=falll></p>
+                    </td>
+                    <td>
+                        <p>едениц<sup>2</sup></p>
+                    </td>
+                </tr>
+            </table>
+       
+        </div>
+        <div class="fifthBlock">
+            <img class="image1" src="./imege1.png">
+        </div>
+        <div class="sithBlock">
+            
+        </div>
+    <script type="text/javascript">
+
+function plus(){
+        let a1 = +document.getElementById('input1').value;
+        let b1 = +document.getElementById('input2').value;
+        let a2 = +document.getElementById('input3').value;
+        let b2 = +document.getElementById('input4').value;
+        let long = +document.getElementById('input5').value;
+        let P = +document.getElementById('P').value;
+       // const p = 3.14;
+
+    let ab1 = a1 * a2;
+    let ab2 = a2 * b2;
+    let fall = ab1 + ab2;
+    let s = fall * long;
+    let mass = P * s;
+   
+
+     document.getElementById('ba1').innerHTML = ab1;
+     document.getElementById('ba2').innerHTML = ab2;
+     document.getElementById('falll').innerHTML = fall;
+
+     //alert(mass);
+
+
+}
+
+    </script>
+ 
+    </body>
+</html>
