@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style type="text/css">
+            
+
+.firstBlock{
+    width: 100%;
+    height: 20%;
+    position: fixed;
+    background-color: #211e1e;
+    text-align: center;
+    top: 0%;
+    left: 0%;
+     outline: 2px solid #000;
+}
+.secondBlock{
+    width: 30%;
+    height: 60%;
+    position: fixed;
+    background-color: #211e1e;
+    top: 20.2%;
+    left: 0%;
+    outline: 2px solid #000;
+}
+.input{
+    margin-left: 10%;
+
+}
+.thirdBlock{
+    width: 100%;
+    height: 60%;
+    position: fixed;
+    background-color: #211e1e;
+    top: 80%;
+    left: 0%;
+    outline: 2px solid #000;
+  color: #DBA901;
+}
+
+.fourthBlock{
+    width: 25%;
+    height: 60%;
+    position: fixed;
+    
+    text-align: center;
+    top: 23%;
+    left: 31.5%;
+  font-size: 90%
+    ;
+}
+.fifthBlock{
+    width: 34%;
+    height: 60%;
+    position: fixed;
+    
+    text-align: center;
+    top: 23%;
+    left: 65.5%;
+    
+}
+.image1{
+  position: absolute;
+  top: 15%;
+  left: 35%;
+}
+.p{
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  color: #DBA901;
+}
+.button1{
+  color: #DBA901;
+  background-color: #212020;
+  border-color: #212020;
+}
+        </style>
+    </head>
+    <body style="background-color: #2E2E2E">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <div class="firstBlock">
+            
+        </div>
+        
+        <div class="secondBlock">
+            <div class="input"  onsubmit="return false;" style=" font-size: 80%">
+                <div style="color: #DBA901">
+                   <p>Внешний радиус</p>
+                   <input type="text" id="input1">
+                   <p>Внутрений радиус</p>
+                   <input type="text" id="input2">
+                   <p>Длина</p>
+                   <input type="text" id="input3">
+                   
+                  
+                   <button class="button1" time="button" onclick="plus()">Расшетать</button>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="thirdBlock">
+            <div class="p">
+               Плотность <input type="text" id="P">
+           </div>
+      
+        <div class="fourthBlock">
+            <table border="1"  width="100%" style="color: #DBA901">
+                <tr>
+                    <td>
+                        <p>Плошядь профиля</p>
+                    </td>
+                    <td>
+                        <p id="s11"></p>
+                    </td>
+                    <td>
+                        <p>cм<sup>2</sup></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Плошядь полости</p>
+                    </td>
+                    <td>
+                        <p id=s22></p>
+                    </td>
+                    <td>
+                        <p>cм<sup>2</sup></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p> плошядь полости</p>
+                    </td>
+                    <td>
+                        <p id=spp></p>
+                    </td>
+                    <td>
+                        <p>cм<sup>2</sup></p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p> обем полости</p>
+                    </td>
+                    <td>
+                        <p id=fal></p>
+                    </td>
+                    <td>
+                        <p>cм<sup>3</sup></p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p> обем профиля</p>
+                    </td>
+                    <td>
+                        <p id=mas></p>
+                    </td>
+                    <td>
+                        <p>г</p>
+                    </td>
+
+                </tr>
+            </table>
+       
+        </div>
+        <div class="fifthBlock">
+            <img class="image1" src="./imege2.png">
+        </div>
+        <div class="sithBlock">
+            
+        </div>
+    <script type="text/javascript">
+
+function plus(){
+        let r1 = +document.getElementById('input1').value;
+        let r2 = +document.getElementById('input2').value;
+        let long = +document.getElementById('input3').value;
+        let P = +document.getElementById('P').value;
+        const pi = 3.14;
+
+    let s1 = pi * r1 * r1;
+    let s2 = pi * r2 * r2;
+    let sp = (s1 - s2);
+ //   let  = (ab1 + ab2) * long;
+  
+
+
+
+    let fall = sp * long;
+    let mass = P * fall;
+
+   
+     document.getElementById('s11').innerHTML = s2;
+     document.getElementById('s22').innerHTML = s1;
+     document.getElementById('spp').innerHTML = sp;
+     document.getElementById('fal').innerHTML = fall;
+     document.getElementById('mas').innerHTML = mass;
+
+     //alert(mass);
+
+
+}
+
+    </script>
+ 
+    </body>
+</html>

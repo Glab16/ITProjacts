@@ -1,0 +1,14 @@
+{
+  "name": "1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "author": "GLAB",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
